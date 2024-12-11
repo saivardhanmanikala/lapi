@@ -1,7 +1,7 @@
 Hello_world.yml
 
 ---
-- hosts: Ansiblehost
+- hosts: ansiblehost
   tasks:
   - name: create docker image
     command: docker build -t hello_world:latest .
@@ -10,7 +10,7 @@ Hello_world.yml
   - name: create tag to push image onto dockerHub
     command: docker tag hello_world:latest saivardan1/hello_world:latest
   - name: Push docker image
-    command: docker push jayakumar301/hello_world:latest
+    command: docker push saivardan1/hello_world:latest
 
 Deploy_hello_world.yml
 
